@@ -4,11 +4,21 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { makeStyles } from "@mui/styles";
+const useStyles = makeStyles(() => ({
+  root: {
+    flexGrow: 1,
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
 const Navbar: React.FC = () => {
+  const classes = useStyles();
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" style={{ flexGrow: 1 }}>
+        <Typography variant="h6" className={classes.title}>
           Let's Take a Stroller
         </Typography>
         <Button color="inherit" component={Link} to="/">
