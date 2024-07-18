@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Typography, Grid, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
-import heroImage from "../assets/stroller.jpg";
+import heroImage from "../assets/stroller.jpeg";
 const useStyles = makeStyles(() => ({
   hero: {
     position: "relative",
