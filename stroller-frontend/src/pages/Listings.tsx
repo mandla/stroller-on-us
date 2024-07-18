@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Container, Typography, Grid, Card, CardContent } from "@mui/material";
+import {
+  Container,
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+} from "@mui/material";
 const Listings: React.FC = () => {
   const [listings, setListings] = useState<any[]>([]);
   useEffect(() => {
@@ -18,6 +25,12 @@ const Listings: React.FC = () => {
         {listings.map((listing) => (
           <Grid item xs={12} sm={6} md={4} key={listing.id}>
             <Card>
+              <CardMedia
+                component="img"
+                alt={listing.name}
+                height="140"
+                image={listing.image || "path/to/placeholder.jpg"}
+              />
               <CardContent>
                 <Typography variant="h5">{listing.name}</Typography>
                 <Typography variant="body2">{listing.description}</Typography>
