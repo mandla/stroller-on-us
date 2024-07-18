@@ -10,7 +10,6 @@ const AppRoutes: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/listings" element={<Listings />} />
-        {/* Add more routes as needed */}
       </Routes>
     </Router>
   );
